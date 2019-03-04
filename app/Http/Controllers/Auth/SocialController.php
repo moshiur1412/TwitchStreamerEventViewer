@@ -32,7 +32,8 @@ class SocialController extends Controller
             ->with('error', trans('socials.noProvider'));
         }
 
-        return Socialite::driver($provider)->redirect();
+        // return Socialite::driver($provider)->redirect();
+        return Socialite::driver($provider)->stateless()->redirect();
     }
 
     /**
@@ -50,7 +51,7 @@ class SocialController extends Controller
             ->with('message', trans('socials.denied'));
         }
 
-        $socialUserObject = Socialite::driver($provider)->user();
+        $socialUserObject = Socialite::driver($provider)->stateless()->user();
 
         $socialUser = null;
 
