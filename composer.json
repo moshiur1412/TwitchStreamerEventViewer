@@ -8,6 +8,7 @@
         "php": "^7.1.3",
         "barryvdh/laravel-debugbar": "^3.0",
         "creativeorange/gravatar": "~1.0",
+        "csanquer/pdo-service-provider": "~1.1dev",
         "doctrine/dbal": "^2.5",
         "fideloper/proxy": "^4.0",
         "google/recaptcha": "^1.1",
@@ -24,7 +25,6 @@
         "rap2hpoutre/laravel-log-viewer": "^0.22.1",
         "socialiteproviders/generators": "^2.0",
         "socialiteproviders/twitch": "^3.0"
-
     },
     "require-dev": {
         "filp/whoops": "^2.0",
