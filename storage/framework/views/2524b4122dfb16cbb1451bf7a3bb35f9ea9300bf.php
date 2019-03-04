@@ -1,14 +1,15 @@
 <div class="card">
-    <div class="card-header bg-info text-white"> Welcome {{ Auth::user()->name }} </div>
+    <div class="card-header bg-info text-white"> Welcome <?php echo e(Auth::user()->name); ?> </div>
     <div class="card-body">
-        <h2 class="lead">  {{ trans('auth.loggedIn') }} </h2>
+        <h2 class="lead">  <?php echo e(trans('auth.loggedIn')); ?> </h2>
         <p> <em>Thank you</em> for checking this project out. <strong>Please check your favorite Twitch Streamers. </strong></p> <hr>
         <!--  <p> <small> Users registered via Social providers are by default activated.</small> </p> -->
 
-        <!-- <hr> {{ var_dump($paginate)}}<hr> -->
+        <!-- <hr> <?php echo e(var_dump($paginate)); ?><hr> -->
         <div class="col-sm-12">
-            <form action="{{ route('public.search') }}" method="get" role="search">
-                {{ csrf_field() }}
+            <form action="<?php echo e(route('public.search')); ?>" method="get" role="search">
+                <?php echo e(csrf_field()); ?>
+
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search your favorite streamer name."> <span class="input-group-btn">
                         <button type="submit" class="btn btn-info">
@@ -24,22 +25,22 @@
        </div>
        <div class="row">
 
-         @foreach($paginate as $user_data)
+         <?php $__currentLoopData = $paginate; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
          <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <iframe class="mb-10" src="https://player.twitch.tv/?channel={!!$user_data['to_name']!!}&autoplay=false" height="350" width="100%" frameborder="0" scrolling="no" allowfullscreen="false">
+                <iframe class="mb-10" src="https://player.twitch.tv/?channel=<?php echo $user_data['to_name']; ?>&autoplay=false" height="350" width="100%" frameborder="0" scrolling="no" allowfullscreen="false">
                 </iframe>
-                <a href="{{ url('streamer', ['streamer' => $user_data['to_id']]) }}" class="btn btn-link">{!! $user_data['to_name'] !!}</a>|&nbsp;  Followed at: {!! $user_data['followed_at'] !!} 
+                <a href="<?php echo e(url('streamer', ['streamer' => $user_data['to_id']])); ?>" class="btn btn-link"><?php echo $user_data['to_name']; ?></a>|&nbsp;  Followed at: <?php echo $user_data['followed_at']; ?> 
 
             </div>
         </div>
     </div>
     <hr>
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <div class="col-sm-12 mb-10 mt-10 text-right">
-        <hr> {{ $paginate->render() }}  <hr>
+        <hr> <?php echo e($paginate->render()); ?>  <hr>
     </div>
 
 

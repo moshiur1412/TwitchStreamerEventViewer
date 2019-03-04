@@ -275,25 +275,6 @@ class ProfilesController extends Controller
             return redirect('profile/'.$user->name.'/edit')->with('error', trans('profile.errorDeleteNotYour'));
         }
 
-        // Create and encrypt user account restore token
-        $sepKey = $this->getSeperationKey();
-        $userIdKey = $this->getIdMultiKey();
-        $restoreKey = config('settings.restoreKey');
-        $encrypter = config('settings.restoreUserEncType');
-        $level1 = $user->id * $userIdKey;
-        $level2 = urlencode(Uuid::generate(4).$sepKey.$level1);
-        $level3 = base64_encode($level2);
-        $level4 = openssl_encrypt($level3, $encrypter, $restoreKey);
-        $level5 = base64_encode($level4);
-
-        // Save Restore Token and Ip Address
-        $user->token = $level5;
-        $user->deleted_ip_address = $ipAddress->getClientIp();
-        $user->save();
-
-        // Send Goodbye email notification
-        $this->sendGoodbyEmail($user, $user->token);
-
         // Soft Delete User
         $user->delete();
 

@@ -1,6 +1,6 @@
 # Streamer Event Viewer (SEV):
 This is a building web application which will help to audience see their favorite streamer's Twitch events in real-time. 
-Web application to see their favorite streamer's content with Twitch API oAuth login. Here is the live SVS system demo Application URL: https://live-sev.herokuapp.com
+Web application to see their favorite streamer's content with Twitch API oAuth login. Here is the live SVS system demo Application URL: https://live-sev.herokuapp.com and repo https://github.com/vorsurm/sev-system
 
 **Version**: 1.0 release of the twitch-streamer-events-viewer application built using React, Redux, Express Server and MongoDB.
 ***

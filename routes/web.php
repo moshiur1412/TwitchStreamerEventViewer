@@ -55,7 +55,7 @@ Route::group(['middleware' => ['auth', 'activated', ]], function () {
     Route::get('/streamer/{streamer}', ['as' => 'public.streamer', 'uses' => 'StreamerController@index']);
 
     // Route for fevorite streamer search 
-    Route::post('/search', ['as' => 'search.streamer', 'uses' => 'UserController@search']);
+    Route::get('/search', ['as' => 'public.search', 'uses' => 'UserController@search']);
 
     // Show users profile - viewable by other users.
     Route::get('profile/{username}', [

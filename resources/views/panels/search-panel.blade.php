@@ -7,7 +7,7 @@
 
         <!-- <hr> {{ var_dump($paginate)}}<hr> -->
         <div class="col-sm-12">
-            <form action="{{ route('search.streamer') }}" method="POST" role="search">
+            <form action="{{ route('public.search') }}" method="POST" role="search">
                 {{ csrf_field() }}
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search your favorite streamer name."> <span class="input-group-btn">
@@ -20,9 +20,9 @@
         </div>
         <hr>
         <div class="col-sm-12">
-           <h2>Follow your favorites ! <small> They'll show up here for easy access! </small></h2><hr>
-       </div>
-       <div class="row">
+         <h2>Follow your favorites ! <small> They'll show up here for easy access! </small></h2><hr>
+     </div>
+     <div class="row">
 
         @if($paginate->count()>1)
 
@@ -48,17 +48,16 @@
     </div>
     <hr>
     @endforeach
-    @else
-    <div class="col-sm-12">
-        <div class="alert alert-info">
-            <strong>Sorry,</strong> There is no matching data found, Please try again letter. eg: Shroud.
-        </div>
-    </div>
-    @endif
-
     <div class="col-sm-12 mb-10 mt-10 text-right">
         <hr> {{ $paginate->render() }}  <hr>
     </div>
+    @else
+    <div class="col-sm-12">
+        <div class="alert alert-info">
+            <strong>Sorry,</strong> There is no matching data found, Please try again later. eg: Shroud.
+        </div>
+    </div>
+    @endif
 
 
 

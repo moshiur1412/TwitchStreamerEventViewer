@@ -84,6 +84,7 @@ class UserController extends Controller
 
         $page = \Input::get('page', 1);
         $perPage = 6;
+        $offset = ($page * $perPage) - $perPage;
 
         $paginate = new LengthAwarePaginator($collection->forPage($page, $perPage), $collection->count(), $perPage, $page, ['path' => $request->url(), 'query' => $request->query()]);
         // dd($paginate);
