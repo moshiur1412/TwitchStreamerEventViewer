@@ -33,8 +33,6 @@ Homestead.json
 ### Assets ###
 /node_modules
 /public/hot
-/public/storage
-/storage/*.key
 /vendor
 packages/
 
