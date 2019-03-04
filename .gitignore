@@ -36,10 +36,6 @@ Homestead.json
 /public/storage
 /storage/*.key
 /vendor
-/storage/debugbar
-/storage/framework
-/storage/logs
-/storage/users
 packages/
 
 # Debug Files
