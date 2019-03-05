@@ -63,7 +63,8 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
-        ]
+        ],
+        "post-install-cmd": ["ln -sr storage/users/" ]
     },
     "config": {
         "preferred-install": "dist",
