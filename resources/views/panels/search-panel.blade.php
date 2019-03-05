@@ -7,7 +7,7 @@
 
         <!-- <hr> {{ var_dump($paginate)}}<hr> -->
         <div class="col-sm-12">
-            <form action="{{ route('public.search') }}" method="POST" role="search">
+            <form action="{{ route('public.search') }}" method="GET" role="search">
                 {{ csrf_field() }}
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search your favorite streamer name."> <span class="input-group-btn">
@@ -20,9 +20,9 @@
         </div>
         <hr>
         <div class="col-sm-12">
-         <h2>Follow your favorites ! <small> They'll show up here for easy access! </small></h2><hr>
-     </div>
-     <div class="row">
+           <h2>Follow your favorites ! <small> They'll show up here for easy access! </small></h2><hr>
+       </div>
+       <div class="row">
 
         @if($paginate->count()>1)
 

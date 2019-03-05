@@ -11,6 +11,7 @@ use App\Traits\CaptureIpTrait;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
 use Laravel\Socialite\Facades\Socialite;
+use App\Events\TwitchLogin;
 
 class SocialController extends Controller
 {
@@ -45,11 +46,16 @@ class SocialController extends Controller
      */
     public function getSocialHandle($provider)
     {
+
         if (Input::get('denied') != '') {
             return redirect()->to('login')
             ->with('status', 'danger')
             ->with('message', trans('socials.denied'));
         }
+
+
+        event(new TwitchLogin($provider));
+
 
         $socialUserObject = Socialite::driver($provider)->stateless()->user();
 
@@ -99,6 +105,8 @@ class SocialController extends Controller
                     'signup_sm_ip_address' => $ipAddress->getClientIp(),
 
                 ]);
+
+
 
                 $socialData->social_id = $socialUserObject->id;
                 $socialData->provider = $provider;

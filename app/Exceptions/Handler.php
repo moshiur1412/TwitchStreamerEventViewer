@@ -63,9 +63,9 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         $userLevelCheck = $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\RoleDeniedException ||
-            $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\RoleDeniedException ||
-            $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\PermissionDeniedException ||
-            $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\LevelDeniedException;
+        $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\RoleDeniedException ||
+        $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\PermissionDeniedException ||
+        $exception instanceof \jeremykenedy\LaravelRoles\Exceptions\LevelDeniedException;
 
         if ($userLevelCheck) {
             if ($request->expectsJson()) {

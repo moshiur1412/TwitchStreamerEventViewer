@@ -13,12 +13,22 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'App\Events\TwitchLogin' => [
+            'App\Listeners\SendTwitchData',
         ],
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [
             'SocialiteProviders\Twitch\TwitchExtendSocialite@handle',
         ],
+
+        'App\Events\SetFollowingStreamer' => [
+            'App\Listeners\SendFollowingStreamer',
+        ],
+
+        'App\Events\SetFavoriteStreamer' => [
+            'App\Listeners\SendFavoriteStreamer',
+        ],
+
+
     ];
 
     /**
