@@ -223,8 +223,8 @@ class ProfilesController extends Controller
         if (Input::hasFile('file')) {
             $currentUser = \Auth::user();
             $avatar = Input::file('file');
-            $filename = 'avatar.'.$avatar->getClientOriginalExtension();
-            $save_path = storage_path().'/users/'.$currentUser->id.'/';
+            $filename = $currentUser->id.$avatar->getClientOriginalExtension();
+            $save_path = storage_path().'/users/';
             $path = $save_path.$filename;
             $public_path = '/images/profile/'.$currentUser->id.'/avatar/'.$filename;
 
