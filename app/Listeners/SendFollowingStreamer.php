@@ -28,13 +28,13 @@ class SendFollowingStreamer
     public function handle(SetFollowingStreamer $event)
     {
 
-        \Log::info('Send Following Streamer Listener::', ['Following by User ID: ' => $event->user_id]);
+        \Log::info('SendFollowingStreamerListener::', ['Following by User ID: ' => $event->user_id]);
 
         $client_id= env('TWITCH_KEY');
         $client = new Client();
 
         try {
-         $response = $client->get(
+           $response = $client->get(
             'https://api.twitch.tv/helix/users/follows?from_id='.$event->user_id, [
                 'headers' => [
                     'Accept' => 'application/json',
@@ -42,15 +42,15 @@ class SendFollowingStreamer
                 ],
             ]);
 
-     } catch (Exception $e) {
-       \Log::error('SendFollowingStreamer: Something is really going wrong.'.$e);
-   }
+       } catch (Exception $e) {
+         \Log::error('SendFollowingStreamer: Something is really going wrong.'.$e);
+     }
 
-   return  $json_response = array_get(json_decode($response->getBody()->getContents(), true), 'data');
+     return  $json_response = array_get(json_decode($response->getBody()->getContents(), true), 'data');
 
 
 
-}
+ }
 
 
 

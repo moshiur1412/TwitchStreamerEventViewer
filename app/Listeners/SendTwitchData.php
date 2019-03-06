@@ -27,6 +27,6 @@ class SendTwitchData
     public function handle(TwitchLogin $event)
     {
         
-        \Log::info('Twitch Login Listener::', ['provider' => $event->provider]);
+        \Log::info('TwitchLoginListener::', ['provider' => $event->provider]);
     }
 }

@@ -5,26 +5,32 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 - Repository URL: https://github.com/vorsurm/sev-system
 - ScreenCast URL: https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
 
-**Version**: 1.0 release of the twitch-streamer-events-viewer-system ***
+**Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
 
-## Table of Contents
-* [Overview](#overview)
-* [Problem Domain](#problem-domain)
-* [Strengths of the System](#strengts-list)
-* [Weakness of the System](#weakness-list)
-* [Feature List](#feature-list)
-* [Further Development](#further-development)
-* [Technologies Used](#technologies-used)
-* [How to run application](#How-to-run-application)
-* [Tests](#tests)
-
-## Overview
-This is identified that the project is developed as SEV-System. It handles a twitch user for a specific subpart of the twitch system. The system totally depends on the API based. The system only used twitch account holder by their account ID, which is must require the next page load and their streamer and channel list shown their page. Therefore, the system is completely run within the error-free in that checking period. 
 ***
 
 
+## Table of Contents
+* [Overview](#overview)
+* [Problem Domain Area](#problem-domain-area)
+* [Strengths of the System](#strengths-of-the-system)
+* [Weakness of the System](#weakness-of-the-system)
+* [Feature List](#feature-list)
+* [Analysis and Design](#analysis-and-design)
+* [Technologies Used](#technologies-used)
+* [Further Development](#further-development)
+* [How to run application](#how-to-run-application)
+* [Questions & Answers](#auestions-&-answers)
+* [Learning Area](#learning-area)
+
+*** 
+
+## Overview
+This is identified that the project is developed as SEV-System. It handles a twitch user for a specific subpart of the twitch system. The system totally depends on the API based. The system only used twitch account holder by their account ID, which is must require the next page load and their streamer and channel list shown their page. Therefore, the system is completely run within the error-free in that checking period. 
+
+
 ## Problem Domain Area
-- When I started the developing part, I have no account on twitch so, I don't have any details knowledge about the twitch sites.
+- When I was started, I don't have any twitch account, lack of details knowledge about the twitch sites.
 - The event I didn't know who is streamer and what is the event list of that streamer.
 - After finding that requirement list I wasted many times.
 - Now, I am working on the python and Android apps so, in that time the PHP takes a few time for working area.
@@ -55,6 +61,25 @@ This is identified that the project is developed as SEV-System. It handles a twi
 - User profile information change
 - After password set using the default login form
 - The user can delete the account.
+
+
+## Analysis and Design
+![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
+
+
+## Technology and Libray Used
+- Laravel 5+, PHP 7+
+- Laravel socialite for Twitch login
+- HTTP Client for JSON API
+- Bootstrap, SCSS, and default level layouts.
+- MySQL for local, PgSQL for Heroku 
+
+
+## Further Development 
+- A user following the new streamer list through the system.
+- Highly UX design with graphical and visual chart reports.
+- Personal email processing with the mail notification system.
+- Role-based with user grouping system on the channel banner.
 
 ***
 
@@ -110,26 +135,7 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 * After password changed, you can log in through the default login form.
 * You can also delete your account form the system.
 
-
-## Further Development 
-- A user following the new streamer list through the system.
-- Highly UX design with graphical and visual chart reports.
-- Personal email processing with the mail notification system.
-- Role-based with user grouping system on the channel banner.
-
-
-
-## Analysis and Design
-![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
-
-
-## Technology and Libray Used
-- Laravel 5+, PHP 7+
-- Laravel socialite for Twitch login
-- HTTP Client for JSON API
-- Bootstrap, SCSS, and default level layouts.
-- MySQL for local, PgSQL for Heroku 
-
+***
 
 ## Questions & Answers
 * How would you deploy the above on AWS? (ideally, a rough architecture diagram will help)
