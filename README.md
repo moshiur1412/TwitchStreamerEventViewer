@@ -3,7 +3,8 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 
 - Application URL: https://live-sev.herokuapp.com
 - Repository URL: https://github.com/vorsurm/sev-system
-- ScreenCast URL: https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
+- ScreenCast Vido For Live Demo Presentation:
+- https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
 
 **Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
 
@@ -15,12 +16,12 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [Problem Domain Area](#problem-domain-area)
 * [Strengths of the System](#strengths-of-the-system)
 * [Weakness of the System](#weakness-of-the-system)
-* [Feature List](#feature-list)
+* [Feature List of the System](#feature-list-of-the-system)
 * [Analysis and Design](#analysis-and-design)
 * [Technology and Libray Used](#technology-and-libray-used)
 * [Further Development](#further-development)
 * [How to run the applicationn](#how-to-run-the-application)
-* [Questions and Answers](#auestions-and-answers)
+* [Questions and Answers](#questions-and-answers)
 * [Learning Area](#learning-area)
 
 *** 
