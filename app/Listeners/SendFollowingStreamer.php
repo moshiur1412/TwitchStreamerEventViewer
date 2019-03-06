@@ -28,7 +28,7 @@ class SendFollowingStreamer
     public function handle(SetFollowingStreamer $event)
     {
 
-        \Log::info('Following Streamer Listener::', ['Following:' => $event->user_id]);
+        \Log::info('Send Following Streamer Listener::', ['Following by User ID: ' => $event->user_id]);
 
         $client_id= env('TWITCH_KEY');
         $client = new Client();

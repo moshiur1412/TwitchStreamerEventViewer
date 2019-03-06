@@ -102,8 +102,6 @@ class SocialController extends Controller
                     'password'             => bcrypt(str_random(40)),
                     'token'                => str_random(64),
                     'activated'            => true,
-                    'signup_sm_ip_address' => $ipAddress->getClientIp(),
-
                 ]);
 
 

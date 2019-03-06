@@ -51,12 +51,14 @@ class StreamerController extends Controller
 
   }
         // dd($json_response);
-  foreach($json_response as $user_data){
-   $streamer =  $user_data['user_name'];
+  if (!empty($json_response)) {
+    foreach($json_response as $user_data){
+     $streamer =  $user_data['user_name'];
+   }
+ }
 
- } 
  if (empty($streamer)) {
-  $streamer = null;
+  $streamer = 'No Display Name';
   \Log::error('StreamerController: Streamer data not found.');
 
 }

@@ -4,8 +4,7 @@
         <h2 class="lead">  {{ trans('auth.loggedIn') }} </h2>
         <p> <em>Thank you</em> for checking this project out. <strong>Please check your favorite Twitch Streamers. </strong></p> <hr>
         <!--  <p> <small> Users registered via Social providers are by default activated.</small> </p> -->
-
-        <!-- <hr> {{ var_dump($paginate)}}<hr> -->
+        
         <div class="col-sm-12">
             <form action="{{ route('public.search') }}" method="GET" role="search">
                 {{ csrf_field() }}
@@ -24,11 +23,11 @@
        </div>
        <div class="row">
 
-        @if($paginate->count()>1)
+          @if(!empty($paginate))
 
-        @foreach($paginate as $user_data)
+          @foreach($paginate as $user_data)
 
-        <div class="col-sm-6">
+          <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <iframe class="mb-10" src="https://player.twitch.tv/?channel={{$user_data['channel']['display_name']}}&autoplay=false" height="350" width="100%" frameborder="0" scrolling="no" allowfullscreen="false">
@@ -39,7 +38,7 @@
                     - &nbsp;  Followers: <strong>  {!! $user_data['channel']['followers'] !!} &nbsp; </strong>
                     | &nbsp;   Views:  <strong>{!! $user_data['channel']['views'] !!} </strong>
                     <p class="text-center">| Game:  <strong>{!! $user_data['channel']['game'] !!} </strong> </p>
-                    
+
 
 
                 </p>

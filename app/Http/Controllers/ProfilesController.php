@@ -7,7 +7,6 @@ use App\Http\Requests\UpdateUserPasswordRequest;
 use App\Http\Requests\UpdateUserProfile;
 use App\Models\Profile;
 use App\Models\User;
-use App\Notifications\SendGoodbyeEmail;
 use App\Traits\CaptureIpTrait;
 use File;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -21,9 +20,6 @@ use View;
 
 class ProfilesController extends Controller
 {
-    protected $idMultiKey = '618423'; //int
-    protected $seperationKey = '****';
-
     /**
      * Create a new controller instance.
      *
@@ -120,7 +116,6 @@ class ProfilesController extends Controller
             $user->profile->fill($input)->save();
         }
 
-        $user->updated_ip_address = $ipAddress->getClientIp();
         $user->save();
 
         return redirect('profile/'.$user->name.'/edit')->with('success', trans('profile.updateSuccess'));
@@ -180,8 +175,6 @@ class ProfilesController extends Controller
             $user->email = $request->input('email');
         }
 
-        $user->updated_ip_address = $ipAddress->getClientIp();
-
         $user->save();
 
         return redirect('profile/'.$user->name.'/edit')->with('success', trans('profile.updateAccountSuccess'));
@@ -205,7 +198,6 @@ class ProfilesController extends Controller
             $user->password = bcrypt($request->input('password'));
         }
 
-        $user->updated_ip_address = $ipAddress->getClientIp();
         $user->save();
 
         return redirect('profile/'.$user->name.'/edit')->with('success', trans('profile.updatePWSuccess'));
@@ -278,7 +270,7 @@ class ProfilesController extends Controller
         }
 
         // Soft Delete User
-        $user->delete();
+        $user->forceDelete();
 
         // Clear out the session
         $request->session()->flush();
@@ -287,36 +279,4 @@ class ProfilesController extends Controller
         return redirect('/login/')->with('success', trans('profile.successUserAccountDeleted'));
     }
 
-    /**
-     * Send GoodBye Email Function via Notify.
-     *
-     * @param array  $user
-     * @param string $token
-     *
-     * @return void
-     */
-    public static function sendGoodbyEmail(User $user, $token)
-    {
-        $user->notify(new SendGoodbyeEmail($token));
-    }
-
-    /**
-     * Get User Restore ID Multiplication Key.
-     *
-     * @return string
-     */
-    public function getIdMultiKey()
-    {
-        return $this->idMultiKey;
-    }
-
-    /**
-     * Get User Restore Seperation Key.
-     *
-     * @return string
-     */
-    public function getSeperationKey()
-    {
-        return $this->seperationKey;
-    }
 }

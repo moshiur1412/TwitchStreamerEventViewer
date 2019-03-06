@@ -27,7 +27,7 @@ class SendFavoriteStreamer
      */
     public function handle(SetFavoriteStreamer $event)
     {
-        \Log::info('Favorite Streamer Listener:', ['Search Query' => $event->query]);
+        \Log::info('Send Streamer Listener:', ['Search Streamer by Name' => $event->query]);
 
         $client_id= env('TWITCH_KEY');
         $client = new Client();

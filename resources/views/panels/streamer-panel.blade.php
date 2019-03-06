@@ -13,14 +13,22 @@
         </div>
         <!-- {{ var_dump($json_response)}} -->
         <div class="row"> 
-         <div class="col-sm-12"> <hr> <h2> List of 10 most recent events </h2> <hr></div>
+           <div class="col-sm-12"> <hr> <h2> List of 10 most recent events </h2> <hr></div>
 
-         @foreach($json_response as $user_data)
-         <div class="col-sm-6">
+           @if(!empty($json_response))
+           @foreach($json_response as $user_data)
+           <div class="col-sm-6">
             <iframe src="https://player.twitch.tv/?autoplay=false&video=v{{ substr($user_data['url'], strrpos($user_data['url'], '/') + 1) }}" frameborder="0" allowfullscreen="true" scrolling="no" height="350" width="100%"></iframe>
         </div>
         @endforeach
-    </div>
+        @else
+        <div class="col-sm-6">
+           <p> Sorry, There is no record here, Please try another one streamer.</p>
+       </div>
+
+       @endif
+
+   </div>
 </div>
 
 </div>

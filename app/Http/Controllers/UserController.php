@@ -35,6 +35,7 @@ class UserController extends Controller
         // Events Handing the full users data process
         $json_data = array_first(event(new SetFollowingStreamer($user_id)));
 
+
         // dd($json_data);
         $collection = collect($json_data);
 

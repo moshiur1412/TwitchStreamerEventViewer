@@ -23,10 +23,10 @@
            <h2>Follow your favorites ! <small> They'll show up here for easy access! </small></h2><hr>
        </div>
        <div class="row">
+          @if(!empty($paginate))
+          @foreach($paginate as $user_data)
 
-         @foreach($paginate as $user_data)
-
-         <div class="col-sm-6">
+          <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <iframe class="mb-10" src="https://player.twitch.tv/?channel={!!$user_data['to_name']!!}&autoplay=false" height="350" width="100%" frameborder="0" scrolling="no" allowfullscreen="false">
@@ -41,8 +41,13 @@
     <div class="col-sm-12 mb-10 mt-10 text-right">
         <hr> {{ $paginate->render() }}  <hr>
     </div>
-
-
+    @else
+    <div class="col-sm-12">
+        <div class="alert alert-info">
+            <strong>Sorry,</strong> There is no data found, Please try again within a refresh.
+        </div>
+    </div>
+    @endif
 
 </div>
 
