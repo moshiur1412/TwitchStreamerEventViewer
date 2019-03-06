@@ -1,12 +1,11 @@
 # Streamer Event Viewer (SEV-System)
 SEV-System is the subsystem which is developed for the twitch audience to see their favorite streamer's twitch events in real time. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository and screencast URL are following below:
 
+**Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
+
 - Application URL: https://live-sev.herokuapp.com
 - Repository URL: https://github.com/vorsurm/sev-system
-- ScreenCast Vido For Live Demo Presentation:
-- https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
-
-**Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
+- ScreenCast video for live demo presentation: https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
 
 ***
 
