@@ -17,10 +17,10 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [Weakness of the System](#weakness-of-the-system)
 * [Feature List](#feature-list)
 * [Analysis and Design](#analysis-and-design)
-* [Technologies Used](#technologies-used)
+* [Technology and Libray Used](#technology-and-libray-used)
 * [Further Development](#further-development)
-* [How to run application](#how-to-run-application)
-* [Questions & Answers](#auestions-&-answers)
+* [How to run the applicationn](#how-to-run-the-application)
+* [Questions and Answers](#auestions-and-answers)
 * [Learning Area](#learning-area)
 
 *** 
@@ -137,7 +137,7 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 
 ***
 
-## Questions & Answers
+## Questions and Answers
 * How would you deploy the above on AWS? (ideally, a rough architecture diagram will help)
 * We can take two different approaches. one is going with MERN stack app deployment on AWS using Nginx server and MongoDB on Ec2 instance and connect it to load balancer for autoscaling
 * the Second approach is going serverless using AWS lambda functions and DynamoDB. (This changes overall architecture and code) 
