@@ -1,10 +1,10 @@
 <script src="{{{ config('settings.dropZoneJsCDN') }}}"></script>
 <script type="text/javascript">
 
-Dropzone.autoDiscover = false;
+    Dropzone.autoDiscover = false;
 
-$(function() {
-   Dropzone.options.avatarDropzone = {
+    $(function() {
+       Dropzone.options.avatarDropzone = {
         paramName: 'file',
         maxFilesize: 1, // MB
         addRemoveLinks: true,
@@ -42,7 +42,7 @@ $(function() {
                 setTimeout(function() {
                     $('.dz-message').text('Drop files here to upload').show();
                 }, 2000);
-                $('#user_selected_avatar, .user-avatar-nav').attr('src', '/images/profile/{{ $user->id }}/avatar/avatar.jpg?' + new Date().getTime());
+                $('#user_selected_avatar, .user-avatar-nav').attr('src', '/images/profile/{{ $user->id }}/avatar/{{ $user->id }}.jpg?' + new Date().getTime());
             });
             this.on("error", function(file, res) {
                 var html = '<div class="progress">';

@@ -223,8 +223,8 @@ class ProfilesController extends Controller
         if (Input::hasFile('file')) {
             $currentUser = \Auth::user();
             $avatar = Input::file('file');
-            $filename = $currentUser->id.$avatar->getClientOriginalExtension();
-            $save_path = storage_path().'/users/';
+            $filename = $currentUser->id.'.'.$avatar->getClientOriginalExtension();
+            $save_path = storage_path().'/users/avatar/';
             $path = $save_path.$filename;
             $public_path = '/images/profile/'.$currentUser->id.'/avatar/'.$filename;
 
@@ -254,8 +254,10 @@ class ProfilesController extends Controller
      */
     public function userProfileAvatar($id, $image)
     {
-        return Image::make(storage_path().'/users/'.$id.'/'.$image)->response();
+        return Image::make(storage_path().'/users/avatar/'.$image)->response();
+
     }
+
 
     /**
      * Update the specified resource in storage.
