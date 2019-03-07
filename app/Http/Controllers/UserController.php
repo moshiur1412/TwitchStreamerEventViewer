@@ -51,7 +51,7 @@ class UserController extends Controller
 
     public function search(Request $request)
     {
-        $query = $request->input('search');
+        $query = $request->input('q');
 
         $json_data = array_first(event(new SetFavoriteStreamer($query)));
         // dd($json_data);

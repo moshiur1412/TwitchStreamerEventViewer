@@ -1,12 +1,16 @@
 # Streamer Event Viewer (SEV-System)
-SEV-System is the subsystem which is developed for the twitch audience to see their favorite streamer's twitch events in real time. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository and screencast URL are following below:
+SEV-System is the subsystem which is developed for the twitch audience to see their favorite streamer's twitch events in real time. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository, and screencast video are following below:
 
 **Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
 
-- Application URL: https://live-sev.herokuapp.com
-- Repository URL: https://github.com/vorsurm/sev-system
-- ScreenCast video for live demo presentation: https://www.useloom.com/share/6b0db87707df438cb6e18f62c939888c
+- Application Live: https://live-sev.herokuapp.com
+- Repository Rources: https://github.com/vorsurm/sev-system
+- Screencast video for live demo presentation:
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fw8XNQBg3KA
+" target="_blank"><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fw8XNQBg3KA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ***
 
 
@@ -16,7 +20,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [Strengths of the System](#strengths-of-the-system)
 * [Weakness of the System](#weakness-of-the-system)
 * [Feature List of the System](#feature-list-of-the-system)
-* [Analysis and Design](#analysis-and-design)
+* [Analysis and Design Specification](#analysis-and-design-specification)
 * [Technology and Libray Used](#technology-and-libray-used)
 * [Further Development](#further-development)
 * [How to run the applicationn](#how-to-run-the-application)
@@ -26,14 +30,14 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 *** 
 
 ## Overview
-This is identified that the project is developed as SEV-System. It handles a twitch user for a specific subpart of the twitch system. The system totally depends on the API based. The system only used twitch account holder by their account ID, which is must require the next page load and their streamer and channel list shown their page. Therefore, the system is completely run within the error-free in that checking period. 
+This is identified that the project developed as calling name is SEV-System. It handles a twitch users for their specific requirements such as set favorite streamer name with their embedded live streaming, events and chatting just like a sub-system of the twitch system. The system totally depends on the API based. The system only used twitch account holder by their account ID, which is must be required for the next page load and their favorite streamer and channel list which are shown their pages. Therefore, the system is completely run error-free in that checking period. 
 
 
 ## Problem Domain Area
-- When I was started, I don't have any twitch account, lack of details knowledge about the twitch sites.
-- The event I didn't know who is streamer and what is the event list of that streamer.
-- After finding that requirement list I wasted many times.
-- Now, I am working on the python and Android apps so, in that time the PHP takes a few time for working area.
+- Build a web application that helps its audience see their favorite streamer's Twitch events in real-time.
+- including chat feature using twitch account login
+- Solution provides any twitch user to login using twitch authentication UI and stream their favorite streamer live channel. 
+- Also enables user to chat on their favorite channels. 
 
 
 ## Strengths of the System
@@ -63,7 +67,7 @@ This is identified that the project is developed as SEV-System. It handles a twi
 - The user can delete the account.
 
 
-## Analysis and Design
+## Analysis and Design Specification
 ![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
 
 
@@ -81,7 +85,6 @@ This is identified that the project is developed as SEV-System. It handles a twi
 - Personal email processing with the mail notification system.
 - Role-based with user grouping system on the channel banner.
 
-***
 
 ## How to run the application
 

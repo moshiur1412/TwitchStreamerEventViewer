@@ -8,9 +8,8 @@
         <!-- <hr> {{ var_dump($paginate)}}<hr> -->
         <div class="col-sm-12">
             <form action="{{ route('public.search') }}" method="get" role="search">
-                {{ csrf_field() }}
                 <div class="input-group">
-                    <input type="text" class="form-control" name="search" placeholder="Search your favorite streamer name."> <span class="input-group-btn">
+                    <input type="text" class="form-control" name="q" placeholder="Search your favorite streamer name."> <span class="input-group-btn">
                         <button type="submit" class="btn btn-info">
                             <span class="fa fa-search"></span>
                         </button>
