@@ -6,11 +6,11 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 - Application Live: https://live-sev.herokuapp.com
 - Repository Rources: https://github.com/vorsurm/sev-system
 - Screencast video for live demo presentation:
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Fw8XNQBg3KA
-" target="_blank"><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg"
+" target="_blank" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fw8XNQBg3KA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ***
 
 
