@@ -28,14 +28,14 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 *** 
 
 ## Overview
-This is identified that the project developed as calling name SEV-System. The system is handle any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. SEV-System is totally depends on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period. 
+This is identified that the project developed as calling name SEV-System. The system handles any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. SEV-System is totally depended on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period. 
 
 
 ## Problem Domain Area
 - Build a web application that helps its audience see their favorite streamer's Twitch events in real-time.
 - Including live-streaming, chat feature for streamer's channel based.
-- Solution provides any twitch user to login using twitch authentication.
-- Also enables user to chat on their favorite channels. 
+- The solution provides any twitch user to login using twitch authentication.
+- Also enables the user to chat on their favorite channels. 
 
 
 ## Strengths in the System
@@ -57,7 +57,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - login with twitch account
 - User Following Channel list
 - Set Favorite Steamer Name
-- Streamer live steaming page with chat
+- Streamer live streaming page with chat
 - Streamer recent 10 events 
 - User profile information change
 - After password set using the default login form
@@ -83,7 +83,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Personal email processing with the mail notification system.
 - Role-based with user grouping system on the channel banner.
 - Refresh authentication token when it expired.
-- Refeactoring coding standerd
+- Refactoring coding standard
 
 ## How to run the application
 
@@ -145,22 +145,22 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 
 ### Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/day to 900MM reqs/day over 6 months?
 
-In this section, I am just tring to figure out form the aws documentation and the tring to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used s3 key, secret, region, bucket and url for image storage. 
+In this section, I am just trying to figure out form the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. 
 
-***AWS Service Purpose**
-- Used auto scaling tools(config: group, min & max size and availablity zones)
-- Around 19 Regions (Availabilty Zones take advantage from aws global infrastructure)
-- Robust, fully featured technology infrasturecutre 
-- Used AWS building blocks (lambda, Cloudfront, Elastic etc.)
+***AWS Service Purpose***
+- Used auto-scaling tools(config: group, min & max size and availability zones)
+- Around 19 Regions (Availability Zones take advantage from AWS global infrastructure)
+- Robust, fully featured technology infrastructure 
+- Used AWS building blocks (lambda, CloudFront, Elastic etc.)
 
 ***For Application Purpose***
-- Applcation load balancer(session, loggin, routing and health check)
+- Application load balancer(session, logging, routing, and health check)
 - shift some load around (cache content)
 - Managed NoSQL database
-- Host & aggregate level metrices, log with external sites (amazon cloudWatch)
+- Host & aggregate level metrics, log with external sites (amazon cloud watch)
 - Service Oriented Architecture
 
-***User > 1 Million***
+***User >1 Millions***
 - Multi-AZ
 - Elastic Load Balancing between tires
 - Auto Scaling
@@ -169,10 +169,10 @@ In this section, I am just tring to figure out form the aws documentation and th
 - Caching off DB
 - Moving state off tiers that auto scale
 
-***User > 10 Million***
+***Users >10 Millions***
 - More fine-tuning of the full application
-- More SOA of features/fuctionality
-- Going from multi-Az to multi-regin
+- More SOA of features/functionality
+- Going from multi-Az to multi-region
 - Possibly start to build custom solutions
 - Deep analysis of the entire stack
 - Build serverless whenever possible
@@ -187,5 +187,3 @@ In the end, I would like to say, I learn very much from that project which was a
 - https://laravel-json-api.readthedocs.io/en/latest/features/http-clients/
 - https://socialiteproviders.netlify.com/providers/twitch.html
 - https://www.quora.com/What-are-the-Laravel-best-practices
-
-
