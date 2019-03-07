@@ -4,26 +4,26 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 **Version**: 1.0 Release of the Twitch Streamer Events Viewer (SEV-System).
 
 - Application Live: https://live-sev.herokuapp.com
-- Repository Rources: https://github.com/vorsurm/sev-system
-- Screencast video for live demo presentation:
-
-<a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8" target="_blank" ><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg" alt="SEV-System Live Demo" width="560" height="315" border="10" /></a>
+- Screencast video for live demo presentation without audio:
+<a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src="screencast_video.jpg" alt="SEV-System Live Demo" width="560" height="315" />
+</a>
 
 ***
 
 
 ## Table of Contents
 * [Overview](#overview)
-* [Problem Domain Area](#problem-domain-area)
-* [Strengths in the System](#strengths-in-the-system)
-* [Weakness in the System](#weakness-in-the-system)
-* [Feature List of the System](#feature-list-of-the-system)
-* [Analysis and Design Specification](#analysis-and-design-specification)
-* [Technology and Libray Used](#technology-and-libray-used)
+* [Problem Domain](#problem-domain)
+* [Systems of Strengths](#systems-of-strengths )
+* [Systems of Weakness](#systems-of-weakness)
+* [System Features List](#system-features-list)
+* [Analysis and Design](#analysis-and-design)
+* [Technologies & libraries](#technologies-&-libraries)
 * [Further Development](#further-development)
 * [How to run the applicationn](#how-to-run-the-application)
 * [Questions and Answers](#questions-and-answers)
 * [Summary](#summary)
+* [References](#references)
 
 *** 
 
@@ -31,14 +31,14 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 This is identified that the project developed as calling name SEV-System. The system handles any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. SEV-System is totally depended on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period. 
 
 
-## Problem Domain Area
-- Build a web application that helps its audience see their favorite streamer's Twitch events in real-time.
-- Including live-streaming, chat feature for streamer's channel based.
-- The solution provides any twitch user to login using twitch authentication.
+## Problem Domain
+- Build a bakend web application that helps its audience see their favorite streamer's events in real-time.
+- Streamer's live-streaming, chat  with recent 10 events feature are included.
+- The solution provides any twitch user to login with twitch oAuth.
 - Also enables the user to chat on their favorite channels. 
 
 
-## Strengths in the System
+## Systems of Strengths
 - The application is fully responsive.
 - Authenticated by the security route such as web, active and current users based.
 - validation and verification with relevant error and success message.
@@ -46,14 +46,14 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Custom error messaging with custom error pages.
 
 
-## Weakness in the System
+## Systems of Weakness
 - The system is not used highly graphics and best UX design.
 - Any information can't modify within the single click.
 - Users can't find their following twitch name in real time just like Twitch.
 - The system didn't config any mailing system for notifications.
 
 
-## Feature List
+## System Features List
 - login with twitch account
 - User Following Channel list
 - Set Favorite Steamer Name
@@ -64,30 +64,30 @@ This is identified that the project developed as calling name SEV-System. The sy
 - The user can delete their own account.
 
 
-## Analysis and Design Specification
+## Analysis and Design
 ![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
 
 
-## Technology and Libray Used
-- Laravel 5+, PHP 7+
-- Laravel socialite for Twitch login
-- HTTP Client for JSON API
+## Technologies & libraries
+- Laravel 5+, PHP 7+.
+- Laravel socialite for Twitch login.
+- HTTP Client for JSON API.
 - Bootstrap, SCSS, and default level layouts.
-- MySQL for local, PgSQL for Heroku 
+- MySQL for local, PgSQL for Heroku.
 - jQuery, Ajax for validation and verification.
 
 
 ## Further Development 
-- A user can follow new streamer through the system.
+- A user can follow new streamer's through the system.
 - Highly UX design with graphical and visual chart reports.
-- Personal email processing with the mail notification system.
-- Role-based with user grouping system on the channel banner.
-- Refresh authentication token when it expired.
-- Refactoring coding standard
+- Personal email processing within the mail notification system.
+- Refresh authentication token when it will expired.
+- Refactoring coding standard with live data loaded.
+- Testing plan implement with phpunit tools.
 
 ## How to run the application
 
-### Run on development environment:
+### Run on development environment
 * Open terminal window with your dev area
 * Then run this below comments
 ```sh
@@ -105,7 +105,7 @@ $ It`s open a browser window with http://localhost:8000/login
 ```
 
 ### Configure environment variables
-* Add .env file at root level
+* Add .env variable name of the following below information.
 ```
 
 MySQL Config:
@@ -129,13 +129,13 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 
 * Browser opens up and runs with URL: `http://localhost:8000/login`
 * Login with twitch account
-* Once on the dashboard, you can see the whole following streamers list here. 
-* You can also search your favorite streamer here above searing area.
-* In there below stream link you can see all details about the streamers.
-* Play around the application, live video with chat and recent 10 events list of the streamers.
-* you can change user details information with a password.
-* After password changed, you can log in through the default login form.
-* You can also delete your account form the system.
+* In the front page you can see the whole following streamers/channel list here. 
+* You can also search your favorite streamer of the whole pages above searing area.
+* In there below streamers links, you can see all details about the streamers.
+* In the streamer page, you can watch live video with chat and recent 10 events list.
+* You can change your details information within your new password for that system.
+* After password changed, you can log in through the default login page.
+* You can also delete your account from the system profile deleted options.
 
 ***
 
@@ -145,28 +145,27 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 
 ### Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/day to 900MM reqs/day over 6 months?
 
-In this section, I am just trying to figure out form the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. 
+In this section, I am just trying to figure out from the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. Therefore, here is the suitable answers are following below. 
 
 ***AWS Service Purpose***
-- Used auto-scaling tools(config: group, min & max size and availability zones)
-- Around 19 Regions (Availability Zones take advantage from AWS global infrastructure)
-- Robust, fully featured technology infrastructure 
+- Used auto-scaling tools(configure: group name, min & max size and availability zones)
+- Around 19 Regions (Availability Zones, used advantage from AWS global infrastructure)
+- Robust, used for fully featured technology infrastructure. 
 - Used AWS building blocks (lambda, CloudFront, Elastic etc.)
 
 ***For Application Purpose***
 - Application load balancer(session, logging, routing, and health check)
-- shift some load around (cache content)
-- Managed NoSQL database
-- Host & aggregate level metrics, log with external sites (amazon cloud watch)
+- shift some load around (Used cache content)
+- Managed NoSQL database for lace schema
 - Service Oriented Architecture
 
 ***User >1 Millions***
-- Multi-AZ
+- Used Multi-AZ depolyment
 - Elastic Load Balancing between tires
-- Auto Scaling
+- Used Auto Scaling tools 
 - Service Oriented Architecture (SOA)
-- Serving Content smartly(S3/ColudFront)
-- Caching off DB
+- Serving Content Smartly(S3/ColudFront)
+- Caching off DB (configurations)
 - Moving state off tiers that auto scale
 
 ***Users >10 Millions***
@@ -179,7 +178,8 @@ In this section, I am just trying to figure out form the AWS documentation and t
 
 
 ## Summary
-In the end, I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
+SEV-System is successfully developed and inplemented also it's live now as a first version 1.0. After hardworking and self-studing period I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
+
 
 ## References
 - https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html 
