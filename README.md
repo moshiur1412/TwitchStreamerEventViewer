@@ -7,7 +7,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 - Repository Rources: https://github.com/vorsurm/sev-system
 - Screencast video for live demo presentation:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fw8XNQBg3KA" target="_blank" ><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg" alt="SEV-System Live Demo" width="560" height="315" border="10" /></a>
+<a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8" target="_blank" ><img src="http://img.youtube.com/vi/Fw8XNQBg3KA/0.jpg" alt="SEV-System Live Demo" width="560" height="315" border="10" /></a>
 
 ***
 
