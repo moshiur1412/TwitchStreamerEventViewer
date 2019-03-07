@@ -5,7 +5,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 
 - Application Live: https://live-sev.herokuapp.com
 - Screencast video for live demo presentation without audio:
-<a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src="screencast_video.jpg" alt="SEV-System Live Demo" width="560" height="315" />
+<a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src=Lscreencast_video.jpg" border="10"alt="SEV-System Live Demo" width="560" height="315" />
 </a>
 
 ***
@@ -18,9 +18,9 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [Systems of Weakness](#systems-of-weakness)
 * [System Features List](#system-features-list)
 * [Analysis and Design](#analysis-and-design)
-* [Technologies & libraries](#technologies-&-libraries)
+* [Technologies and Libraries](#technologies-and-libraries)
 * [Further Development](#further-development)
-* [How to run the applicationn](#how-to-run-the-application)
+* [How to run the System](#how-to-run-the-system)
 * [Questions and Answers](#questions-and-answers)
 * [Summary](#summary)
 * [References](#references)
@@ -28,12 +28,11 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 *** 
 
 ## Overview
-This is identified that the project developed as calling name SEV-System. The system handles any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. SEV-System is totally depended on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period. 
-
+This is identified that the project developed as calling name SEV-System. The system handles any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. It's totally depended on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period.
 
 ## Problem Domain
-- Build a bakend web application that helps its audience see their favorite streamer's events in real-time.
-- Streamer's live-streaming, chat  with recent 10 events feature are included.
+- Build a backend web application that helps its audience see their favorite streamer's events in real-time.
+- Streamer's live-streaming, chat with recent 10 events feature are included.
 - The solution provides any twitch user to login with twitch oAuth.
 - Also enables the user to chat on their favorite channels. 
 
@@ -68,7 +67,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 ![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
 
 
-## Technologies & libraries
+## Technologies and libraries
 - Laravel 5+, PHP 7+.
 - Laravel socialite for Twitch login.
 - HTTP Client for JSON API.
@@ -81,13 +80,13 @@ This is identified that the project developed as calling name SEV-System. The sy
 - A user can follow new streamer's through the system.
 - Highly UX design with graphical and visual chart reports.
 - Personal email processing within the mail notification system.
-- Refresh authentication token when it will expired.
+- Refresh the authentication token when it will be expired.
 - Refactoring coding standard with live data loaded.
-- Testing plan implement with phpunit tools.
+- Testing plan implements with PHPUnit tools.
 
-## How to run the application
+## How to run the System
 
-### Run on development environment
+### Run on the development environment
 * Open terminal window with your dev area
 * Then run this below comments
 ```sh
@@ -105,7 +104,7 @@ $ It`s open a browser window with http://localhost:8000/login
 ```
 
 ### Configure environment variables
-* Add .env variable name of the following below information.
+* Add the .env variable name of the following below information.
 ```
 
 MySQL Config:
@@ -148,7 +147,7 @@ TWITCH_REDIRECT_URI=http://localhost:8000/social/handle/twitch
 In this section, I am just trying to figure out from the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. Therefore, here is the suitable answers are following below. 
 
 ***AWS Service Purpose***
-- Used auto-scaling tools(configure: group name, min & max size and availability zones)
+- Used auto-scaling tools(configure: group name, min & max size, and availability zones)
 - Around 19 Regions (Availability Zones, used advantage from AWS global infrastructure)
 - Robust, used for fully featured technology infrastructure. 
 - Used AWS building blocks (lambda, CloudFront, Elastic etc.)
@@ -160,7 +159,7 @@ In this section, I am just trying to figure out from the AWS documentation and t
 - Service Oriented Architecture
 
 ***User >1 Millions***
-- Used Multi-AZ depolyment
+- Used Multi-AZ deployment
 - Elastic Load Balancing between tires
 - Used Auto Scaling tools 
 - Service Oriented Architecture (SOA)
@@ -178,7 +177,7 @@ In this section, I am just trying to figure out from the AWS documentation and t
 
 
 ## Summary
-SEV-System is successfully developed and inplemented also it's live now as a first version 1.0. After hardworking and self-studing period I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
+SEV-System is successfully developed and implemented also it's live now as a first version 1.0. After the hardworking and self-studying period, I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
 
 
 ## References
