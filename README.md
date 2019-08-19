@@ -13,8 +13,8 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 ## Table of Contents
 * [Overview](#overview)
 * [Problem Domain](#problem-domain)
-* [Systems of Strengths](#systems-of-strengths )
-* [Systems of Weakness](#systems-of-weakness)
+* [System of Strengths](#systems-of-strengths )
+* [System of Weakness](#systems-of-weakness)
 * [System Features List](#system-features-list)
 * [Analysis and Design](#analysis-and-design)
 * [Technologies and Libraries](#technologies-and-libraries)
@@ -36,7 +36,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Also enables the user to chat on their favorite channels. 
 
 
-## Systems of Strengths
+## System of Strengths
 - The application is fully responsive.
 - Authenticated by the security route such as web, active and current users based.
 - validation and verification with relevant error and success message.
@@ -44,7 +44,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Custom error messaging with custom error pages.
 
 
-## Systems of Weakness
+## System of Weakness
 - The system is not used highly graphics and best UX design.
 - Any information can't modify within the single click.
 - Users can't find their following twitch name in real time just like Twitch.
@@ -157,7 +157,7 @@ In this section, I am just trying to figure out from the AWS documentation and t
 - Managed NoSQL database for lace schema
 - Service Oriented Architecture
 
-***User >1 Millions***
+***Users >1 Millions***
 - Used Multi-AZ deployment
 - Elastic Load Balancing between tires
 - Used Auto Scaling tools 
