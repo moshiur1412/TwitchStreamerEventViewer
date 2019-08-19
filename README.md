@@ -12,11 +12,11 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 
 ## Table of Contents
 * [Overview](#overview)
-* [Problem Domain](#problem-domain)
+* [Problem Domain Area](#problem-Domain-Area)
 * [The Advantages of System](#The-Advantages-of-System)
 * [The Limitations of System](#The-Limitations-of-System)
-* [System Features List](#system-features-list)
-* [Analysis and Design](#analysis-and-design)
+* [The System Features List](#system-features-list)
+* [Analysis and Design (ERD)](#analysis-and-design-(ERD)
 * [Technologies and Libraries](#technologies-and-libraries)
 * [Further Development](#further-development)
 * [How to run the System](#how-to-run-the-system)
@@ -29,7 +29,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 ## Overview
 This is identified that the project developed as calling name SEV-System. The system handles any twitch users for their specific requirements such as set favorite streamer name, their embedded live streaming, recent events and chatting just like a sub-system of the Twitch TV. It's totally depended on the Twitch API, which is used by their twitch account ID, that is must be required for their next pages load. Therefore, the system is completely run error-free in that checking period.
 
-## Problem Domain
+## Problem Domain Area
 - Build a backend web application that helps its audience see their favorite streamer's events in real-time.
 - Streamer's live-streaming, chat with recent 10 events feature are included.
 - The solution provides any twitch user to login with twitch oAuth.
@@ -51,7 +51,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - The system didn't config any mailing system for notifications.
 
 
-## System Features List
+## The System Features List
 - login with twitch account
 - User Following Channel list
 - Set Favorite Steamer Name
@@ -62,7 +62,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - The user can delete their own account.
 
 
-## Analysis and Design
+## Analysis and Design (ERD)
 ![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
 
 
