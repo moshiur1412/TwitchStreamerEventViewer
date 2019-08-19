@@ -16,7 +16,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [The Advantages of System](#The-Advantages-of-System)
 * [The Limitations of System](#The-Limitations-of-System)
 * [The System Features List](#system-features-list)
-* [Analysis and Design (ERD)](#analysis-and-design-(ERD))
+* [Entity Relationship Diagram (ERD)](#Entity-Relationship-Diagram-(ERD))
 * [Technologies and Libraries](#technologies-and-libraries)
 * [Further Development](#further-development)
 * [How to run the System](#how-to-run-the-system)
@@ -62,7 +62,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - The user can delete their own account.
 
 
-## Analysis and Design (ERD)
+## Entity Relationship Diagram (ERD)
 ![arc](erd_diagram.jpg?raw=true "ERD_Diagram")
 
 
