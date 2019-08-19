@@ -13,8 +13,8 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 ## Table of Contents
 * [Overview](#overview)
 * [Problem Domain](#problem-domain)
-* [System of Strengths](#systems-of-strengths )
-* [System of Weakness](#systems-of-weakness)
+* [The Advantages of System Thinking](#The-Advantages-of-System-Thinking)
+* [The Limitations of Systems Thinking](#The-Limitations-of-Systems-Thinking)
 * [System Features List](#system-features-list)
 * [Analysis and Design](#analysis-and-design)
 * [Technologies and Libraries](#technologies-and-libraries)
@@ -36,7 +36,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Also enables the user to chat on their favorite channels. 
 
 
-## System of Strengths
+## The Advantages of System Thinking
 - The application is fully responsive.
 - Authenticated by the security route such as web, active and current users based.
 - validation and verification with relevant error and success message.
@@ -44,7 +44,7 @@ This is identified that the project developed as calling name SEV-System. The sy
 - Custom error messaging with custom error pages.
 
 
-## System of Weakness
+## The Limitations of Systems Thinking
 - The system is not used highly graphics and best UX design.
 - Any information can't modify within the single click.
 - Users can't find their following twitch name in real time just like Twitch.
