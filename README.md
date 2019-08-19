@@ -16,7 +16,7 @@ SEV-System is the subsystem which is developed for the twitch audience to see th
 * [The Advantages of System](#The-Advantages-of-System)
 * [The Limitations of System](#The-Limitations-of-System)
 * [The System Features List](#system-features-list)
-* [Analysis and Design (ERD)](#analysis-and-design-(ERD)
+* [Analysis and Design (ERD)](#analysis-and-design-(ERD))
 * [Technologies and Libraries](#technologies-and-libraries)
 * [Further Development](#further-development)
 * [How to run the System](#how-to-run-the-system)
