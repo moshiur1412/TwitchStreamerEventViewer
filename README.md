@@ -1,6 +1,6 @@
-# Streamer Event Viewer (TwitchStreamerEventViewer)
+# Twitch Streamer Event Viewer
 
-TwitchStreamerEventViewer is the subsystem which is developed for the twitch audience to see their favorite streamer's twitch events in real time. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository, and screencast video are following below:
+Twitch Streamer Event Viewer is the subsystem which is developed for the twitch audience to see their favorite streamer's twitch events in real time. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository, and screencast video are following below:
 
 **Version**: 1.0 Release of the Twitch Streamer Events Viewer (TwitchStreamerEventViewer).
 
