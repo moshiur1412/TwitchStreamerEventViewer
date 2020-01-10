@@ -6,7 +6,7 @@ Twitch Streamer Event Viewer is the subsystem which is developed for the twitch 
 
 - Application Live: https://live-sev.herokuapp.com
 - Screencast video for live demo presentation without audio:
-  <a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src="screencast_video.jpg" border="10" alt="SEV_System_Live_Demo" width="560" height="315" /></a>
+  <a href="https://youtu.be/hpPZlZ-Mc_Y"><img src="screencast_video.jpg" border="10" alt="SEV_System_Live_Demo" width="560" height="315" /></a>
 
 ---
 
